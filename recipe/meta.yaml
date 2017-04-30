@@ -1,9 +1,9 @@
-{%set name = "Flask-Login" %}
-{%set version = "0.4.0" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "d25e356b14a59f52da0ab30c31c2ad285fa23a840f0f6971df7ed247c77082a7" %}
-{% set build_num = "0" %}
+{% set name = "Flask-Login" %}
+{% set version = "0.2.11" %}
+{% set compress_type = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash = "83d5f10e5c4f214feed6cc41c212db63a58a15ac32e56df81591bfa0a5cee3e5" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -12,10 +12,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ compress_type }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  {{ hash_type }}: {{ hash }}
 
 build:
-  number: {{ build_num }}
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -34,9 +34,9 @@ test:
 
 about:
   home: https://github.com/maxcountryman/flask-login
+  license_file: LICENSE
   license: MIT
   license_family: MIT
-  license_file: LICENSE
   summary: 'User session management for Flask'
   dev_url: https://github.com/maxcountryman/flask-login
   doc_url: https://flask-login.readthedocs.io/en/latest/
