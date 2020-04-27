@@ -1,9 +1,6 @@
 {% set name = "Flask-Login" %}
 {% set version = "0.5.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "6d33aef15b5bcead780acc339464aae8a6e28f13c90d8b1cf9de8b549d1c0b4b" %}
-{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -12,17 +9,17 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash_val }}
+  sha256: 6d33aef15b5bcead780acc339464aae8a6e28f13c90d8b1cf9de8b549d1c0b4b
 
 build:
-  number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
   noarch: python
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
     - flask
 
   run:
@@ -45,3 +42,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - synapticarbors
