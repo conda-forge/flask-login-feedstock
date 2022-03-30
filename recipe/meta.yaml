@@ -1,5 +1,5 @@
 {% set name = "Flask-Login" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 {% set bundle = "tar.gz" %}
 
 package:
@@ -9,11 +9,11 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  sha256: 6d33aef15b5bcead780acc339464aae8a6e28f13c90d8b1cf9de8b549d1c0b4b
+  sha256: aa84fcfb4c3cf09ca58c08e816b7bce73f1349ba1cf13d00d8dffc5872d5fcf6
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'User session management for Flask'
+  summary: User session management for Flask
   dev_url: https://github.com/maxcountryman/flask-login
   doc_url: https://flask-login.readthedocs.io/en/latest/
 
