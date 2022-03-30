@@ -29,6 +29,10 @@ requirements:
 test:
   imports:
     - flask_login
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/maxcountryman/flask-login
