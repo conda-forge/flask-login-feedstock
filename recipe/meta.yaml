@@ -18,13 +18,13 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
-    - flask
 
   run:
-    - python
-    - flask
+    - python >=3.7
+    - flask >=1.0.4
+    - werkzeug >=1.0.1
 
 test:
   imports:
