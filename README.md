@@ -1,11 +1,11 @@
-About flask-login
-=================
+About flask-login-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flask-login-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/maxcountryman/flask-login
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flask-login-feedstock/blob/main/LICENSE.txt)
 
 Summary: User session management for Flask
 
@@ -149,4 +149,5 @@ Feedstock Maintainers
 
 * [@pmlandwehr](https://github.com/pmlandwehr/)
 * [@synapticarbors](https://github.com/synapticarbors/)
+* [@xylar](https://github.com/xylar/)
 
