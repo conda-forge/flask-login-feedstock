@@ -1,5 +1,5 @@
 {% set name = "Flask-Login" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 {% set bundle = "tar.gz" %}
 
 package:
@@ -9,10 +9,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  sha256: c0a7baa9fdc448cdd3dd6f0939df72eec5177b2f7abe6cb82fc934d29caac9c3
+  sha256: 5e23d14a607ef12806c699590b89d0f0e0d67baeec599d75947bf9c147330333
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
